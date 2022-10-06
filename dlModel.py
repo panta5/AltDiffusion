@@ -125,13 +125,15 @@ if "desc" in model:
     print(model["desc"])
 
 # Aria2 에서 사용할 인자 만들기
-args = ["-d", "../stable-diffusion-webui/models/Stable-diffusion"]
+# args = ["-d", "./stable-diffusion-webui/models/Stable-diffusion"]
+args = ["-P", "./stable-diffusion-webui/models/Stable-diffusion"]
 
 if "args" in model:
     args += model["args"]
 
-args.append(model["url"])
+# args.append(model["url"])
+args.insert(0, model["url"])
 args = " ".join(args)
 
-# Aria2로 모델 받아오기
-os.system("aria2c " + args)
+# Aria2로 모델 받아오기... 였으나 이상하게 aria2가 작동안해서 wget으로 대체
+os.system("wget " + args)

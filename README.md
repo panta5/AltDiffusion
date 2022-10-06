@@ -4,6 +4,16 @@
 
 ## 세 줄 요약
 
+선택사항\. 기존에 쓰던 지우고 파이썬 3.10 설치 먼저 하는게 좋음 (스크립트 내에 있긴한데 가끔 설치 안되고 그냥 넘어가는경우가 있어서)
+
+```bash
+# 선택사항, 아래는 3.10버전 설치하는 방법임 지우는건 알아서 해야함.
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt install -yq python3.10 python3.10-dev
+sudo rm /usr/bin/python
+ln -sf /usr/bin/python3.10 /usr/bin/python
+```
+
 1\. 레포지토리 clone 및 실행권한 부여
 
 ```bash
@@ -18,10 +28,13 @@ sudo chmod +x setup.sh
 sudo ./setup.sh
 ```
 
-3\. start\.sh 실행
+3\. 실행
+
+설치완료 후:
 
 ```bash
-sudo ./start.sh
+cd stable-diffusion-webui
+python launch.py
 ```
 
 ## 자세한 설명

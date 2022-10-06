@@ -51,6 +51,8 @@ done
 pip install --upgrade setuptools
 pip install moviepy
 
+# Aria2 이상하게 작동 안해서 그냥 wget으로 대체했는데 혹시모르니까 설치
+
 # 추가 패키지 설치하기
 apt install -y aria2
 mkdir -p ~/.aria2
@@ -91,7 +93,8 @@ echo "16. R34 (epoch 1)"
 echo "17. Pony Diffusion"
 echo "18. Pokemon"
 echo "선택하지 않거나 잘못된 값을 입력 할 경우 1번으로 자동 다운로드 됩니다."
-python ./scripts/dlModel.py
+cd ../..
+python dlModel.py
 
 
 echo "완료."
