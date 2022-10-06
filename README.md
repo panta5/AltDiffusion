@@ -75,7 +75,7 @@ python launch.py
 
 ## 코드 출처
 
-아카라이브 AI그림 채널: [바로가기](https://arca.live/b/aiart/59406212)
+아카라이브 AI그림 채널: [바로가기](https://arca.live/b/aiart/59955768)
 
 ## 게시중단요청
 
