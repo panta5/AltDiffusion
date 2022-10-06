@@ -15,7 +15,7 @@ if ! which python3.10 > /dev/null 2>&1; then
 
   # 환경에 따라 PATH 값이 다르기 때문에 심볼릭을 바꾸는 편이 update-alternative 보다 간단함
   # TODO: 더 나은 방법이 있는지?
-  ln -sf $(which python3.10) $(which python)
+  ln -sf $(which python3.10) /usr/bin/python
 fi
 
 # PIP 설치하기
@@ -45,7 +45,7 @@ do
   curl -sO $i
 done
 
-pip install --upgrade setuptools # TODO: ...?
+pip install --upgrade setuptools
 pip install moviepy
 
 # 추가 패키지 설치하기
@@ -67,3 +67,28 @@ seed-time=0"
 
 echo "$ariacfg" > ~/.aria2/aria2.conf
 
+# 미리 학습한 모델받기
+echo "다운로드 받으실 모델을 선택해주세요."
+echo "1. Standard Model 1.4"
+echo "2. Waifu Diffusion 1.2"
+echo "3. Waifu Diffusion 1.3 (epoch 9)"
+echo "4. Trinart Stable Diffusion v2 60,000 Steps"
+echo "5. Trinart Stable Diffusion v2 95,000 Steps"
+echo "6. Trinart Stable Diffusion v2 115,000 Steps"
+echo "7. Hiten"
+echo "8. WD v1.2 and SD v1.4 Merged"
+echo "9. gg1342_testrun1"
+echo "10. Hentai Diffusion RD1412"
+echo "11. Bare Feet / Full Body b4_t16_noadd"
+echo "12. Lewd Diffusion 70k (epoch 2)"
+echo "13. Yiffy (epoch 18)"
+echo "14. Furry (epoch 4)"
+echo "15. Zack3D Kinky v1"
+echo "16. R34 (epoch 1)"
+echo "17. Pony Diffusion"
+echo "18. Pokemon"
+echo "선택하지 않거나 잘못된 값을 입력 할 경우 1번으로 자동 다운로드 됩니다."
+python ./scripts/dlModel.py
+
+
+echo "완료."
