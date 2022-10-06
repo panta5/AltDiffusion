@@ -38,7 +38,6 @@ rst = checkNum(int(id))
 
 if rst == 0:
     print("잘못 입력하셨습니다. 기본 모델로 다운로드합니다.")
-    print("다시 다운로드 하시려면 download.sh 파일을 실행해주세요.")
     rst = 1
 else:
     print(libr[rst - 1] + " 모델로 다운로드합니다.")

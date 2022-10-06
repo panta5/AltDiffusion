@@ -94,7 +94,9 @@ echo "17. Pony Diffusion"
 echo "18. Pokemon"
 echo "선택하지 않거나 잘못된 값을 입력 할 경우 1번으로 자동 다운로드 됩니다."
 cd ../..
-python dlModel.py
+echo -n "값을 입력해주세요: "
+read input
+python dlModel.py $input
 
 
 echo "완료."
