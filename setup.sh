@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# start.sh 실행권한 부여
+chmod +x ./start.sh
+
 # 오래된 우분투를 사용하여 파이썬을 받을 수 없는 경우 사용자 레포지토리 추가하기
 if ! apt-cache show python3.10 > /dev/null 2>&1; then
   echo '패키지 관리자에 Python 3.10 이 존재하지 않습니다, 사용자 레포지토리를 추가합니다'
