@@ -8,6 +8,7 @@
 
 ```bash
 git clone https://github.com/panta5/AltDiffusion.git
+cd AltDiffusion
 sudo chmod +x setup.sh
 ```
 
@@ -32,3 +33,7 @@ sudo ./start.sh
 | #   | 이슈 | 진행상황 |
 | --- | ---- | -------- |
 | 1   |      |          |
+
+## 출처
+
+아카라이브 AI그림 채널: (바로가기)[https://arca.live/b/aiart/59406212]
